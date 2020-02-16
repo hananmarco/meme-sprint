@@ -347,7 +347,7 @@ footer {
 }
 
 .fill-color-input {
-    background-image: url('/images/icons/color.png');
+    background-image: url('../images/icons/color.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -357,7 +357,7 @@ footer {
 }
 
 .stroke-color-input {
-    background-image: url('/images/icons/text-shadow.png');
+    background-image: url('../images/icons/text-shadow.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
