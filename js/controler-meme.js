@@ -69,10 +69,11 @@ function drawText() {
 }
 
 function markerLine() {
+    var el = document.querySelector('#myCanvas')
     var meme = getMeme();
     var y = meme.lines[meme.selectedLineIdx].y;
     gCtx.fillStyle = 'rgb(0,0,0,0.2)';
-    gCtx.fillRect(0, y - 20, 500, 40);
+    gCtx.fillRect(40, y - 20, el.offsetWidth - 80, 40);
 }
 function showEditor(imgId) {
     document.querySelector('.canvas-editor').style.display = "flex";

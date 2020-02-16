@@ -2,10 +2,7 @@
 
 var gCanvas
 var gCtx;
-var gKeywords = {};
 var gFilterBy = ''
-
-
 
 var gImgs = [
     { id: 1, url: 'images/meme-imgs/1.jpg', keywords: ['Politics', 'Angry'] },
