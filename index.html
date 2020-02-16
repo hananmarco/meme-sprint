@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeCreator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo-container"><img id="logo" src="images/LOGO/LOGO.png"></div>
+            <div class="links-container">
+                <ul class="links">
+                    <li onclick="showGallery()">
+                        <a href="#">Gallery</a>
+                    </li>
+                    <span class="separator">|</span>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="toggle-menu-btn fa" onclick="toggleMenu()">&#9776;</button>
+            <div class="toggle-menu-screen screen" onclick="toggleMenu()"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="filter-container">
+        <div class="search-box-container">
+            <div class="search-type"> <input id="search-input" placeholder="Enter Search Keywords" type="text"
+                    onkeyup="onSearch(event)"></div>
+            <div class="search-img"><img src="images/icons/search.png" alt=""></div>
+        </div>
+
+        <div class="keyword-search-container">
+        </div>
+
+    </div>
+
+
+    <div class="canvas-editor">
+        <div class="canvas-container">
+            <canvas id="myCanvas" width="500" height="500" style="border: 1px solid black;">
+            </canvas>
+        </div>
+        <div class="editor-control">
+            <input id="meme-text" type="text" oninput="onTextType()">
+
+            <div class="control-box">
+                <div class="panel-1">
+                    <div class="btn-control" onclick="onSwitchLine()"><img class="switch-line-icon"
+                            src="images/icons/switch-line.png"></div>
+                    <div class="btn-control" onclick="onAddLine()"><img class="add-icon"
+                            src="images/icons/add-line.png"></div>
+                    <div class="btn-control" onclick="onDeleteLine()"><img class="delete-line-icon"
+                            src="images/icons/trash.png"></div>
+                </div>
+
+                <div class="panel-2">
+                    <div class="btn-control" onclick="onAlignRight()"><img class="align-left-icon"
+                            src="images/icons/align-to-left.png"></div>
+                    <div class="btn-control" onclick="onAlignCenter()"><img class="align-center-icon"
+                            src="images/icons/center-text-alignment.png"></div>
+                    <div class="btn-control" onclick="onAlignLeft()"><img class="align-right-icon"
+                            src="images/icons/align-right.png"></div>
+
+                    <div class="btn-control" onclick="onIncreaseFontSize()"><img class="increase-icon"
+                            src="images/icons/increase-font.png"></div>
+
+                    <div class="btn-control" onclick="onDecreaseFontSize()"><img class="decrease-icon"
+                            src="images/icons/decrease-font.png"></div>
+                </div>
+
+                <div class="panel-3">
+                    <div class="btn-control" onclick="onTextMoveUp()"><img class="up-icon" src="images/icons/up.png">
+                    </div>
+
+                    <div class="btn-control" onclick="onTextMoveDown()"><img class="down-icon"
+                            src="images/icons/down.png"></div>
+                </div>
+
+                <div class="panel-4">
+                    <div>
+                        <select name="change-font" onchange="onChangeFont(value)" id="">
+                            <option>Impact</option>
+                            <option>Montserrat</option>
+                            <option>Lemonada</option>
+                            <option>Galada</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="btn-control stroke-color-input">
+                            <input class="stroke-color" type="color" onchange="onChangeStrokeColor(value)" />
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="btn-control fill-color-input">
+                            <input class="fill-color" type="color" onchange="onChangeFillColor(value)" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel-5">
+                    <div class="download-btn">
+                        <a id="download" download="myMeme.jpg" href="" onclick="downloadMeme(this);">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+    </div>
+
+    <div class="about-container" id="about">
+        <div class="details">
+            <div class="my-name">Hanan Marco</div>
+            <p class="content">
+                Nice to meet you! My name is Hanan,
+                student at Coding Acadamy,
+                passionate about coding, exploring new technologies and.
+            </p>
+
+            <div class="social-container">
+                <div>
+                    <a href="https://www.linkedin.com/">
+                        <img src="images/icons/linkedin-logo.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/">
+                        <img src="images/icons/facebook-logo.png">
+                    </a>
+                </div>
+                <div class="social-link-be"><img src="images/icons/github-logo.png" alt=""></div>
+            </div>
+        </div>
+        <img class="my-img" src="images/me/me.PNG" alt="">
+    </div>
+
+    <div class="footer-continer">
+        <div class="logo-footer">
+            <a href="#">
+                <img id="logo" src="images/LOGO/LOGO.png">
+            </a>
+        </div>
+    </div>
+    <div class="all-rights"><span>all rights reserved 2019</span></div>
+    </div>
+
+    <script src="js/utils-service.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/controler-meme.js"></script>
+</body>
+
+</html>
